@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FlexBox</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/glyphicons/styles/glyphicons.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/window.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" charset="utf-8" src="lib/modernizr-custom.js"></script>
+    <script>
+        //THREE.JS用
+        var Viewer = {};
+        var ThreeViewer = {};
+    </script>
+</head>
+
+<body>
+
+<div class="wrapper color6" ng-controller="myController">
+
+    <header class="window-bar header container-flex">
+        <div class="item item_center color5 fix90 clearfix border-right">
+            <ul class="window-actions">
+                <li class="window-action-wrapper">
+                    <a href="#" class="window-action window-action-minimize" title="Minimize"><span>Minimize</span></a>
+                </li>
+                <li class="window-action-wrapper window-action-wrapper-maximize">
+                    <a href="#" class="window-action window-action-maximize" title="Maximize"><span>Maximize</span></a>
+                </li>
+                <li class="window-action-wrapper window-action-wrapper-restore">
+                    <a href="#" class="window-action window-action-restore" title="Restore"><span>Restore</span></a>
+                </li>
+                <li class="window-action-wrapper window-action-wrapper-close">
+                    <a href="#" class="window-action window-action-close" title="Close"><span>Close</span></a></li>
+            </ul>
+        </div>
+        <div class="item item_center color_con2 fix130 clearfix border-right">
+            <span class="glyphicon glyphicon-user"></span>
+        </div>
+        <div class="item item_center color_con2" style="flex-grow:8;">
+            <strong><span class="glyphicon glyphicon-lamp"></span>&nbsp;THREE.JS App </strong><span
+                class="version">ver.1</span>
+        </div>
+
+        <div class="item item_center color_con0 fix60 clearfix border-left">
+            <img class="toplogo" src="img/sog_round_logo.png" style="width:26px;height:26px;"/>
+        </div>
+    </header>
+
+    <div class="menu container-flex clearfix">
+            <span class="item item_center fix220 color1 border-right">
+                <a href="#" ng-click="menuAction(1)">
+            <span class="glyphicon glyphicon-menu-right"></span> &nbsp;ACT1</a>
+
+            </span>
+        <span class="item item_center color2">
+              <a href="#" ng-click="menuAction(2)">ACT2</a>
+            </span>
+        <span class="item item_center color3">
+               <a href="#" ng-click="menuAction(3)">ACT3</a>
+            </span>
+        <span class="item item_center color4">
+             <a href="#" ng-click="menuAction(4)">ACT4</a>
+            </span>
+
+        <span class="item item_center color5">
+            <a href="#" ng-click="menuAction(5)">ACT5</a>
+        </span>
+    </div>
+
+    <div id="three" class="container container-flex clearfix">
+        <!-- THREE.JS -->
+    </div>
+
+    <div class="footer color_con2">
+        <div class="item item_center color_con0 fix40 clearfix">
+        </div>
+
+        <div style="text-align:center;width:100%;">
+            <span class="glyphicon glyphicon-copyright-mark"></span> &nbsp;
+            <a href="http://someonesgarden.org">Someonesgarden,LLP</a>, 2016
+        </div>
+        <div class="item item_center color_con0 fix40 clearfix">
+        </div>
+    </div>
+
+</div>
+<!-- electron -->
+<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/window.js"></script>
+<!--script type="text/javascript" charset="utf-8" src="js/menu.js"></script-->
+<script type="text/javascript" charset="utf-8" src="js/ipc.js"></script>
+
+
+<!-- three.js -->
+<script type="text/javascript" charset="utf-8" src="node_modules/three/build/three.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="node_modules/three/examples/js/controls/FirstPersonControls.js"></script>
+<script type="text/javascript" charset="utf-8" src="node_modules/three/examples/js/controls/OrbitControls.js"></script>
+<script type="text/javascript" charset="utf-8" src="node_modules/jquery-hammerjs/jquery.hammer.js"></script>
+<!--script src="src/lib/jquery.hammer.js"></script-->
+
+<!-- angular -->
+<script type="text/javascript" charset="utf-8" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/ngHammer.js"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="js/ang/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/three/index.js"></script>
+
+</body>
+</html>
